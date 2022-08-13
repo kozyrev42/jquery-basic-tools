@@ -1,0 +1,12 @@
+.red {
+    color: rgb(255, 0, 0);
+}
+
+.blue {
+    color: blue;
+}
+
+.big-font {
+    font-size: 24px;
+    font-weight: 400;
+}
