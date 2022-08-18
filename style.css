@@ -14,3 +14,8 @@
 .grey {
     color: grey
 }
+
+.aaa1, .aaa2, .aaa3, .aaa4  {
+    font-size: 24px;
+    font-weight: 400;
+}
