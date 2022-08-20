@@ -81,3 +81,71 @@ $('.sss').replaceWith('<span>Заменил элемент</span>');
 // Метод .remove() удаляет элементы навсегда
 // метод .detach() удаляет выбранные элементы с возможностью их восстановления.
 // С помощью метода .empty() можно удалить содержимое элементов (сами элементы никуда не деваются)
+
+
+
+
+// Работа с событиями jQuery
+// при клике на элемент 'li' -> вызов функции
+// $('li').click(function() {
+// 	alert('!');
+// });
+
+// ВАЖНО! Внутри привязанной функции доступен this, ссылающийся на тот элемент, в котором произошло событие
+// Этот this можно использовать, для вызова на нём методов jQ
+// для этого этот 'this' следует обернуть в $, вот так: $(this)
+// $('li').click(function() {
+// 	$(this).append('!');
+// });
+
+// Привязанные события можно отвязать с помощью метода unbind
+// $('li').click(function func() {
+// 	$(this).append('!');
+// 	$(this).unbind('click', func);	// событие -> click -> больше не работает
+// });
+
+
+// Универсальный метод on()
+// Для привязывания событий также можно использовать универсальный метод on()
+// Первым параметром он принимает название события (например, 'click'), а вторым - функцию, которую следует привязать
+$('li').on('click', function() {
+	$(this).append('+');
+});
+
+// Отвязывание событий, привязанных через on, производится с помощью метода off.
+
+
+// список методов jQuery, которые можно использовать для привязки событий: click, blur, focus, focusin, focusout,
+//  load, resize, scroll, unload, click, dblclick, mousedown, mouseup, mousemove, mouseover, mouseout, mouseenter,
+//  mouseleave, change, select, submit, keydown, keypress, keyup, error
+
+// one() -  позволяет привязать однократное событие - оно выполнится только только один раз
+// $('li').one('click', function() {
+// 	$(this).append('###');
+// });
+
+
+
+// Работа с эффектами и анимацией jQuery
+// Методы hide и show позволяют скрывать и показывать элементы.
+// $('#btn-hide').click(function() {
+// 	$('#element-box').hide();
+// });
+
+// $('#btn-show').click(function() {
+// 	$('#element-box').show();
+// });
+
+// Методы slideUp и slideDown позволяют сделать закатывание и выкатывание элемента обратно
+$('#btn-hide').click(function() {
+	$('#element-box').slideUp(1000);
+});
+
+$('#btn-show').click(function() {
+	$('#element-box').slideDown(1000);
+});
+
+// slideToggle - это одновременно slideUp и slideDown
+$('#btn-hide-show').click(function() {
+	$('#element-box').slideToggle(1000);
+});
