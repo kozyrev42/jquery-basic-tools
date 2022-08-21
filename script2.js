@@ -137,6 +137,7 @@ $('li').on('click', function() {
 // });
 
 // Методы slideUp и slideDown позволяют сделать закатывание и выкатывание элемента обратно
+// display: none;
 $('#btn-hide').click(function() {
 	$('#element-box').slideUp(1000);
 });
@@ -146,6 +147,7 @@ $('#btn-show').click(function() {
 });
 
 // slideToggle - это одновременно slideUp и slideDown
+// display: none;
 $('#btn-hide-show').click(function() {
 	$('#element-box').slideToggle(1000);
 });
